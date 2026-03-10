@@ -1,2 +1,2 @@
-# Novas_Tecnologias_py
+# Novas Tecnologias
 Repositório das aulas de Novas Tecnologias de Ciências da Computação 
