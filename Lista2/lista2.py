@@ -9,45 +9,25 @@
 # Caderno	    |       10	    |  12.50            | 125.00
 # Caneta Azul	|       50	    |  2.75	            | 137.50
 
-tabelas = {
-    "id1": [{"id": 1, "produto": "", "quantidade": 0, "preco": 0, "total": 0}],
-    "id2": [{"id": 2, "produto": "", "quantidade": 0, "preco": 0, "total": 0}]
-}
-
-while True:
-    i = int(input("Escolha a tabela digite:\n1 - primeira tabela\n2 - segunda tabela\n3 - ver tabelas \n0 - sair"))
-    if i == 1:
-        chave = "id1"
-
-    elif i == 2:
-        chave = "id2"
-    elif i == 0:
-        print("Programa Fechado!!")
-        exit()
-    elif i == 3:
-        print("\nTodas as tabelas:")
-        print(tabelas)
-        continue
-    else:
-        print("Opção inválida")
-        continue
-
-    produto = input("Digite o nome do produto: ")
-    quantidade = int(input("Digite a quantidade: "))
-    preco = float(input("Digite o preço: "))
-
-    tabelas[chave][0]["produto"] = produto
-    tabelas[chave][0]["quantidade"] = quantidade
-    tabelas[chave][0]["preco"] = preco
-    tabelas[chave][0]["total"] = quantidade * preco
-    print("\nTabela atualizada:")
-    print(tabelas[chave])
-
-    # nome = input("Digite o nome do produto: ")
-    # quant = float (input("Digite a quantdade do produto: "))
-    # valor = float (input("Digite o preço de cada produto: "))
-    # total = (valor * quant)
-
+tabelas = []
+for i in range (2):
+    produt = input("Insira o produto: ")
+    quant = int(input("Insira a quantidade: "))
+    preco = float(input("Insira o valor"))
+    total = preco * quant
+    linha = {
+        "produto": produt,
+        "quantidade": quant,
+        "preco": preco,
+        "total": total
+    }
+    tabelas.append(linha)
+print("\n"+"-" * 50)
+print(f"{'PRODUTO': <20}{'QUANTIDADE': <10}{'PREÇO': <10}{'TOTAL': <10}")
+print("\n"+"-" * 50)
+for i in tabelas:
+    print(f"{i['produto']:<20}{i['quantidade']:<10}{i['preco']:<10}{i['total']:<10}")
+print("-" * 50)
 
 # 2. Gerador de Fatura Personalizada
 # Solicite o nome completo de um cliente, o número do pedido e a data de emissão.
