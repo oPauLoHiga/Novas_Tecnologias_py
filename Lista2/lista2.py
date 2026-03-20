@@ -22,12 +22,12 @@ for i in range (2):
         "total": total
     }
     tabelas.append(linha)
-print("\n"+"-" * 50)
-print(f"{'PRODUTO': <20}{'QUANTIDADE': <10}{'PREÇO': <10}{'TOTAL': <10}")
-print("\n"+"-" * 50)
+print("\n"+"-" * 70)
+print("{:<20}{:<20}{:<15}{:<20}".format("PRODUTO", "QUANTIDADE", "PRECO", "TOTAL"))
+print("\n"+"-" * 70)
 for i in tabelas:
-    print(f"{i['produto']:<20}{i['quantidade']:<10}{i['preco']:<10}{i['total']:<10}")
-print("-" * 50)
+    print("{:<20}{:<20}{:<15}{:<20}".format(i['produto'],i['quantidade'],i['preco'],i['total']))
+print("-" * 70)
 
 # 2. Gerador de Fatura Personalizada
 # Solicite o nome completo de um cliente, o número do pedido e a data de emissão.
