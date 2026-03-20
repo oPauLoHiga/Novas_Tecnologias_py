@@ -43,14 +43,15 @@ import os
 # 3. Validador e Formatador de CPF Peça ao usuário que digite um
 # CPF apenas com números (11 dígitos) e exiba o
 # CPF formatado corretamente no padrão ###.###.###-## utilizando f-strings.
-cpf = input('Digite seu cpf: ')
-if len(cpf) == 11 :
-     if cpf.isnumeric():
-         os.system('cls')
-         print(f"seu CPF formatado é: {cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[-2::]}")
-else:
-    os.system('cls')
-    print("Erro!! Tente novamente\nDigite apenas os numeros do CPF")
+
+# cpf = input('Digite seu cpf: ')
+# if len(cpf) == 11 :
+#      if cpf.isnumeric():
+#          os.system('cls')
+#          print(f"seu CPF formatado é: {cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[-2::]}")
+# else:
+#     os.system('cls')
+#     print("Erro!! Tente novamente\nDigite apenas os numeros do CPF")
 
 # 4. Simulador de Cupom Fiscal
 # Implemente uma função que recebe uma lista de produtos (nome, quantidade, preço unitário)
