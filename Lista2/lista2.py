@@ -36,8 +36,8 @@
 # Use .format() com placeholders posicionais e nomeados.
 
 
-# 3. Validador e Formatador de CPF
-# Peça ao usuário que digite um CPF apenas com números (11 dígitos) e exiba o
+# 3. Validador e Formatador de CPF Peça ao usuário que digite um
+# CPF apenas com números (11 dígitos) e exiba o
 # CPF formatado corretamente no padrão ###.###.###-## utilizando f-strings.
 
 
