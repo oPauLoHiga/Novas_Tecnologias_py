@@ -9,25 +9,25 @@
 # Caderno	    |       10	    |  12.50            | 125.00
 # Caneta Azul	|       50	    |  2.75	            | 137.50
 
-tabelas = []
-for i in range (2):
-    produt = input("Insira o produto: ")
-    quant = int(input("Insira a quantidade: "))
-    preco = float(input("Insira o valor"))
-    total = preco * quant
-    linha = {
-        "produto": produt,
-        "quantidade": quant,
-        "preco": preco,
-        "total": total
-    }
-    tabelas.append(linha)
-print("\n"+"-" * 70)
-print("{:<20}{:<20}{:<15}{:<20}".format("PRODUTO", "QUANTIDADE", "PRECO", "TOTAL"))
-print("\n"+"-" * 70)
-for i in tabelas:
-    print("{:<20}{:<20}{:<15}{:<20}".format(i['produto'],i['quantidade'],i['preco'],i['total']))
-print("-" * 70)
+# tabelas = []
+# for i in range (2):
+#     produt = input("Insira o produto: ")
+#     quant = int(input("Insira a quantidade: "))
+#     preco = float(input("Insira o valor"))
+#     total = preco * quant
+#     linha = {
+#         "produto": produt,
+#         "quantidade": quant,
+#         "preco": preco,
+#         "total": total
+#     }
+#     tabelas.append(linha)
+# print("\n"+"-" * 70)
+# print("{:<20}{:<20}{:<15}{:<20}".format("PRODUTO", "QUANTIDADE", "PRECO", "TOTAL"))
+# print("\n"+"-" * 70)
+# for i in tabelas:
+#     print("{:<20}{:<20}{:<15}{:<20}".format(i['produto'],i['quantidade'],i['preco'],i['total']))
+# print("-" * 70)
 
 # 2. Gerador de Fatura Personalizada
 # Solicite o nome completo de um cliente, o número do pedido e a data de emissão.
