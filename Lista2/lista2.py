@@ -4,6 +4,7 @@
 # Depois, exiba uma tabela formatada com alinhamento justificado,
 # casas decimais nos preços e total de cada produto.
 # Use f-strings e. format() para praticar os dois métodos.
+import os
 
 # Produto	    | Quantidade	| Preço Unitário    | Total
 # Caderno	    |       10	    |  12.50            | 125.00
@@ -35,11 +36,21 @@
 # O layout deve conter espaços definidos, alinhamento central e colunas formatadas.
 # Use .format() com placeholders posicionais e nomeados.
 
+# nome = input('Digite seu nome completo: ')
+# pedido = int(input('Digite seu numero do pedido: '))
+# dt_pedido = input('Digite a data de emissão: ')
 
 # 3. Validador e Formatador de CPF Peça ao usuário que digite um
 # CPF apenas com números (11 dígitos) e exiba o
 # CPF formatado corretamente no padrão ###.###.###-## utilizando f-strings.
-
+cpf = input('Digite seu cpf: ')
+if len(cpf) == 11 :
+     if cpf.isnumeric():
+         os.system('cls')
+         print(f"seu CPF formatado é: {cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[-2::]}")
+else:
+    os.system('cls')
+    print("Erro!! Tente novamente\nDigite apenas os numeros do CPF")
 
 # 4. Simulador de Cupom Fiscal
 # Implemente uma função que recebe uma lista de produtos (nome, quantidade, preço unitário)
@@ -67,7 +78,6 @@
 # Maria     :  6.5 (Recuperação) MARROM
 #
 
-
 # 6. Registro de Logs com Nível de Criticidade
 # Crie uma função de log que receba uma mensagem, o nível de criticidade
 # (INFO, WARNING, ERROR) e a hora atual.
@@ -77,7 +87,6 @@
 # [2025-03-05 16:33:29] [INFO] Sistema iniciado
 # [2025-03-05 16:33:29] [WARNING] Atenção: baixo estoque
 # [2025-03-05 16:33:29] [ERROR] Falha na conexão
-
 
 
 # 7. Formatação de Código SQL Dinâmico
