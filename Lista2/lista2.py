@@ -4,7 +4,8 @@
 # Depois, exiba uma tabela formatada com alinhamento justificado,
 # casas decimais nos preços e total de cada produto.
 # Use f-strings e. format() para praticar os dois métodos.
-import os
+
+# import os
 
 # Produto	    | Quantidade	| Preço Unitário    | Total
 # Caderno	    |       10	    |  12.50            | 125.00
@@ -103,6 +104,7 @@ import os
 # e retorna uma string formatada em estilo de cupom fiscal de supermercado.
 # Inclua nome da loja, data, e o valor total no final,
 # com todos os valores alinhados e com R$ corretamente formatado.
+
 # Supermercado Malvader
 # Data:        05/03/2025 16:24
 # ------------------------------
@@ -111,8 +113,47 @@ import os
 # Caneta            10      2.75
 # ------------------------------
 # Total                    52.50
-#
-#
+
+from datetime import datetime
+
+tabelas = []
+totalreal = []
+
+def listagem_produtos(tabela):
+        for i in range (2):
+            item = input("Insira o produto: ")
+            quant = int(input("Insira a quantidade: "))
+            preco = float(input("Insira o valor"))
+            total = preco * quant
+            linha = {
+                "item": item,
+                "quantidade": quant,
+                "preco": preco,
+                "total": total
+            }
+            tabelas.append(linha)
+            totalreal.append(total)
+
+def mostrar_produtos():
+        print("\n"+"-" * 70)
+        print("Supermercado Malvader")
+        print("{:<45}{:<10}".format("Data:",datetime.today().strftime("%d/%m/%Y %H:%M")))
+        print("{:<20}{:<20}{:<15}{:<20}".format("ITEM", "QUANTIDADE", "PRECO", "TOTAL"))
+        print("-" * 70)
+        for i in tabelas:
+            print("{:<20}{:<20}{:<15.2f}{:<20.2f}".format(
+                i['item'],
+                i['quantidade'],
+                i['preco'],
+                i['total']
+            ))
+        print("-" * 70)
+        print("\n{:<55}{:<1}{:<10.2f}".format("Total","R$",sum(totalreal)))
+        print("-" * 70)
+
+listagem_produtos(tabelas)
+mostrar_produtos()
+
 # 5. Formatação Condicional de Resultados Acadêmicos
 # Dado um dicionário com nomes de alunos e suas notas, gere um boletim formatado onde:
 # - Notas acima de 7 aparecem em verde (use ANSI escape codes).
