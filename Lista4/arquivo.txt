@@ -1,0 +1,4 @@
+Isto é uma nova linha
+
+Isto é um texto sendo anexado a arquivo.txt
+E outra linha aqui.
